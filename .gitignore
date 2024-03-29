@@ -52,3 +52,42 @@ MANIFEST
 .venv*/
 .conda*/
 .python-version
+
+
+
+.venv
+.coverage
+.coverage.*
+_build
+.DS_Store
+.vscode
+.python-version
+docs/_static/pypi.svg
+.tox
+__pycache__
+
+# Packaging artifacts
+black.egg-info
+black.dist-info
+build/
+dist/
+pip-wheel-metadata/
+.eggs
+
+# src/_black_version.py
+# src/_blax_version.py
+.idea
+
+.dmypy.json
+*.swp
+.hypothesis/
+venv/
+.ipynb_checkpoints/
+
+# lamnguyenx
+*-exp/
+exp/
+exp
+exp-*/
+exp-*
+exp.*

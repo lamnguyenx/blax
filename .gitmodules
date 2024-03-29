@@ -1,0 +1,3 @@
+[submodule "src/black"]
+	path = src/__submodules__/black
+	url = https://github.com/lamnguyenx/black.git
