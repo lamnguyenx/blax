@@ -7,3 +7,18 @@ build-backend = "setuptools.build_meta"
 # For smarter version schemes and other configuration options,
 # check out https://github.com/pypa/setuptools_scm
 version_scheme = "no-guess-dev"
+
+[project]
+name = "blax"
+description = "The uncompromising code formatter."
+license = { text = "MIT" }
+requires-python = ">=3.8"
+authors = [
+  { name = "lamnguyenx", email = "lamfm95@gmail.com" },
+]
+dynamic = ["readme", "version"]
+
+
+[project.scripts]
+blax = "blax:patched_main"
+blaxd = "blaxd:patched_main [d]"
