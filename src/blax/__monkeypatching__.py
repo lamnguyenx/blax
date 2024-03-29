@@ -12,7 +12,8 @@ if not booleanify(os.environ.get("JUST_BLACK", False)):
 
     # patching black
     from . import black
-    print("targeted black:", black.__file__)
+    print("🍅 black \t", black.__file__)
+
 
     from .super_alignments.const import STYLE_LAMNGUYENX
     black.mode.Mode.STYLE = STYLE_LAMNGUYENX
