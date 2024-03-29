@@ -1,3 +1,3 @@
-import blackd
+import blaxd
 
-blackd.patched_main()
+blaxd.patched_main()

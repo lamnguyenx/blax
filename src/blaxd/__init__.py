@@ -19,9 +19,9 @@ except ImportError as ie:
 
 import click
 
-import black
+from .black.concurrency import maybe_install_uvloop
+import blax as black
 from _black_version import version as __version__
-from black.concurrency import maybe_install_uvloop
 
 # This is used internally by tests to shut down the server prematurely
 _stop_signal = asyncio.Event()
