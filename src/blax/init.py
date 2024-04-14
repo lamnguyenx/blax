@@ -1,3 +1,9 @@
+#!/usr/bin/env python3
+
+# Copyright 2024 (author: lamnguyenx)
+
+
+# local
 from .black import *
 from .super_alignments.format_super_alignment import format_super_alignment
 from .super_alignments.format_super_brackets import format_super_brackets
@@ -6,6 +12,8 @@ from .super_alignments.nested_show_level import nested_node_show_level
 from .super_alignments.jot_line import jot_line
 
 
+
+### FUNCTIONS
 def _format_str_once__BLAX(
     src_contents: str, *, mode: Mode, lines: Collection[Tuple[int, int]] = ()
 ) -> str:

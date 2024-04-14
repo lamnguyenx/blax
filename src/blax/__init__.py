@@ -5,4 +5,3 @@
 from .black import *
 from . import __monkeypatching__
 __version__ = 'test'
-print("🍅 blax \t", __file__)

@@ -22,3 +22,7 @@ dynamic = ["readme", "version"]
 [project.scripts]
 blax = "blax:patched_main"
 blaxd = "blaxd:patched_main [d]"
+
+
+[tool.setuptools.data-files]
+data = ["blax/black/blib2to3/*.txt"]

@@ -4,17 +4,25 @@
 
 
 import os
+import pathlib
 import typing as tp
 from .booleanify import booleanify
 
 
 if not booleanify(os.environ.get("JUST_BLACK", False)):
-
     # patching black
+    from .cache import get_cache_dir__BLAX
+    os.environ['BLACK_CACHE_DIR'] = str(get_cache_dir__BLAX())
+
+    # actual import
     from . import black
-    print("🍅 black \t", black.__file__)
+    # print("🍅 black \t", black.__file__)
 
+    # patching black caches
+    black.cache.CACHE_DIR = get_cache_dir__BLAX()
+    black.cache.get_cache_dir = get_cache_dir__BLAX
 
+    # patching lines
     from .super_alignments.const import STYLE_LAMNGUYENX
     black.mode.Mode.STYLE = STYLE_LAMNGUYENX
 
@@ -38,7 +46,6 @@ if not booleanify(os.environ.get("JUST_BLACK", False)):
 
     from .init import _format_str_once__BLAX
     black._format_str_once = _format_str_once__BLAX
-
 
     # patching black.blib2to3
     from .black.blib2to3 import pytree as black_blib2to3_pytree
